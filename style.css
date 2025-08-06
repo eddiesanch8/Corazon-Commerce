@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #f0f0f0;
+}
+
+/* Nest all these elements later */
+.nav-bar {
+  background-color: #0f0f23;
+  color: #f0f0f0;
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-bar__ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1rem;
+}
+
+/* Use operand later?*/
+.nav-bar__item a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem 2rem;
+  transition: background-color 150ms ease;
+}
+
+.nav-bar__item a:hover {
+  background-color: #f0f0f069;
+}
+
+.nav-bar__item--home {
+  order: -1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1.5fr;
+  grid-template-areas:
+    "hero"
+    "gallery";
+  min-height: 40rem;
+  max-height: auto;
+}
+
+.hero {
+  grid-area: hero;
+  background: #fff url("images/human-narrative-_F9sENU1Wtk-unsplash.jpg") center
+    center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.products {
+  width: 100%;
+  background-color: red;
+}
+
+/* mobile nav */
+
+@media screen and (max-width: 800px) {
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(15em, 100%);
+    z-index: 10;
+    border-left: 1px solid #f0f0f0;
+    transition: right 300ms ease-out;
+  }
+
+  .nav-bar--show {
+    right: 0;
+  }
+
+  .nav-bar__ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .open-sidebar {
+    display: block;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .nav-bar--close {
+    color: #f0f0f0;
+  }
+}

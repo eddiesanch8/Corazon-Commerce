@@ -5,23 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Corazón</title>
     <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
   </head>
-  <div class="primary">
-    <h2 class="primary-head">This is Main</h2>
-    <p class="primary-text">
-      This is accent text Lorem ipsum dolor sit amet, consectetur adipisicing
-      elit. Consequuntur, alias voluptas! Earum, eveniet sit ipsam dicta magnam
-      unde neque ea nostrum, inventore impedit labore voluptate!
-    </p>
-  </div>
+  <body>
+    <header>
+      <button class="open-sidebar">
+        <img src="images/hamburger.svg" />
+      </button>
+      <nav class="nav-bar" data-nav-bar>
+        <ul class="nav-bar__ul">
+          <li class="nav-bar__item nav-bar--close">
+            <img
+              src="images/close-btn.svg"
+              alt="close"
+              data-close-btn
+              class="close-btn"
+            />
+          </li>
+          <li class="nav-bar__item nav-bar__item--home">
+            <a href="index.html">Logo</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="products/products.html"> Products</a>
+          </li>
+          <li class="nav-bar__item">
+            <input type="text" class="nav-bar__input" placeholder="Mag" />
+          </li>
+          <li class="nav-bar__item">
+            <a href="contact/contact.html"> Contact Us</a>
+          </li>
+          <li class="nav-bar__item nav-bar__item--accent">
+            <a href="contact/contact.html"> Account </a>
+          </li>
+          <li class="nav-bar__item"><a> Cart</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="secondary">
-    <h2 class="secondary-head">
-      This is secondary, we are using accents and different color text
-    </h2>
-    <p class="secondary-text">This is Text</p>
-  </div>
+    <main class="grid-container">
+      <section class="hero">Image of Hero Spanning whole page</section>
+      <section class="products">Product Caurosel</section>
+    </main>
 
-  <body></body>
+    <!-- <footer class="web-footer">
+      <ul class="footer-container">
+        <li class="footer-item">
+          <a href="contact/contact.html">Contact Us </a>
+        </li>
+        <li class="footer-item"><a href="">Privacy Notice </a></li>
+        <li class="footer-item"><a href="">Instagam</a></li>
+        <li class="footer-item"><a href="">GitHub</a></li>
+      </ul>
+    </footer> -->
+  </body>
 </html>
