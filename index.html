@@ -6,42 +6,51 @@
     <title>Corazón</title>
     <link rel="stylesheet" href="css/shared.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="js/shared.js" defer></script>
     <script src="index.js" defer></script>
   </head>
   <body>
     <header>
-      <button class="open-sidebar">
+      <button
+        class="open-sidebar"
+        data-open-btn
+        aria-label="open-sidebar"
+        aria-expanded="false"
+        aria-controls="nav-bar"
+      >
         <img src="images/hamburger.svg" />
       </button>
       <nav class="nav-bar" data-nav-bar>
+        <button class="nav-bar--close">
+          <img src="images/close-btn.svg" alt="close" data-close-btn />
+        </button>
         <ul class="nav-bar__ul">
-          <li class="nav-bar__item nav-bar--close">
-            <img
-              src="images/close-btn.svg"
-              alt="close"
-              data-close-btn
-              class="close-btn"
-            />
-          </li>
           <li class="nav-bar__item nav-bar__item--home">
-            <a href="index.html">Logo</a>
+            <a class="nav-bar__anchor" href="index.html" aria-current="page"
+              >Logo</a
+            >
           </li>
           <li class="nav-bar__item">
-            <a href="products/products.html"> Products</a>
+            <a class="nav-bar__anchor" href="products/products.html">
+              Products</a
+            >
           </li>
           <li class="nav-bar__item">
             <input type="text" class="nav-bar__input" placeholder="Mag" />
           </li>
           <li class="nav-bar__item">
-            <a href="contact/contact.html"> Contact Us</a>
+            <a class="nav-bar__anchor" href="contact/contact.html">
+              Contact Us</a
+            >
           </li>
           <li class="nav-bar__item nav-bar__item--accent">
-            <a href="contact/contact.html"> Account </a>
+            <a class="nav-bar__anchor" href="contact/contact.html"> Account </a>
           </li>
-          <li class="nav-bar__item"><a> Cart</a></li>
+          <li class="nav-bar__item"><a class="nav-bar__anchor"> Cart</a></li>
         </ul>
       </nav>
     </header>
+    <div class="overlay" data-overlay aria-hidden="true"></div>
 
     <main class="grid-container">
       <section class="hero">Image of Hero Spanning whole page</section>
