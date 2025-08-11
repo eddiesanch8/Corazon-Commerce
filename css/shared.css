@@ -5,11 +5,11 @@
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
   height: auto;
   position: absolute;
   left: -1.2rem;
-  top: -4rem;
+  top: -3rem;
 }
 @media (max-width: 850px) {
   .logo {
