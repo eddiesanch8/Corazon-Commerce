@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shoes|Corazón</title>
     <link rel="stylesheet" href="../css/shared.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+
     <script src="../js/shared.js" defer></script>
+    <script src="../js/contact.js" defer></script>
   </head>
   <header>
     <button
@@ -47,28 +50,56 @@
   <div class="overlay" data-overlay aria-hidden="true"></div>
   <body>
     <main class="grid-container">
+      <section class="hero"></section>
 
-      <section id="form" class="container__section--form">
-      <h2 class="contact__form">Contact Information:</h2>
-      <form class="volunteer__form" id="volunteer">
-        <label for="name" class="form__label">Name</label>
-        <input type="text" id="name" name="name" placeholder="Full Name:">
-        <p class="error" data-error-msg></p>
-        <label for="email" class="form__label">Email</label>
-        <input type="text" id="email" name="email" placeholder="Email:"  title="needs @ and . com">
-        <p class="error" data-error-msg></p>
-        <label for="phone" class="form__label">Phone Number</label>
-        <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number:">
-        <p class="error" data-error-msg></p>
-        <label for="message" class="form__label">Message</label>
-        <input type="text" id="message" name="message" placeholder="Phone Number:">
-        <p class="error" data-error-msg></p>
-        <button class="submit-btn" data-submit-btn>Submit</button>
-      </form>
+      <section class="contact">
+        <h2 class="contact__header">Contact Information:</h2>
+        <div class="contact-card">
+          <form class="contact__form" id="form">
+            <label for="name" class="form__label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name:"
+              data-input-name
+            />
+            <p class="error" data-error-msg></p>
+            <label for="email" class="form__label">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email:"
+              data-input-email
+            />
+            <p class="error" data-error-msg></p>
+            <label for="phone" class="form__label">Phone Number</label>
+            <input
+              type="text"
+              id="phonenumber"
+              name="phonenumber"
+              placeholder="Phone Number:"
+              data-input-phone
+            />
+            <p class="error" data-error-msg></p>
+            <label for="message" class="form__label">Message</label>
+            <input
+              type="text"
+              id="message"
+              name="message"
+              placeholder="Send a message!"
+              data-input-message
+            />
+            <p class="error" data-error-msg></p>
+            <button type="submit" class="submit-btn" data-submit-btn>
+              Submit
+            </button>
+          </form>
+        </div>
       </section>
-    </section>
 
-
+      <!-- end of main -->
     </main>
     <footer class="web-footer">
       <ul class="footer-container">
@@ -80,5 +111,5 @@
         <li class="footer-item"><a href="">GitHub</a></li>
       </ul>
     </footer>
-    </body>
+  </body>
 </html>
