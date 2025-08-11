@@ -1,0 +1,37 @@
+@use "sass:map";
+
+$colors: (
+  "off-white": #f0f0f0,
+  "deep-navy": #0f0f23,
+  "electric-blue": #00bfff,
+  "pop-pink": #ff1493,
+  "gold": #ffd700,
+  "black": #2f2d2d,
+  "overlay": #2b2b2b8b,
+  "nav-hover": #f0f0f069,
+);
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1.5fr;
+  grid-template-areas:
+    "hero"
+    "gallery";
+  min-height: 40rem;
+}
+
+.hero {
+  grid-area: hero;
+  background: map.get($colors, off-white)
+    url("images/human-narrative-_F9sENU1Wtk-unsplash.jpg") center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.products {
+  width: 100%;
+  background-color: rgb(14, 14, 107);
+}

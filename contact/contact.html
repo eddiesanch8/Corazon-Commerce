@@ -22,18 +22,15 @@
         <img src="../images/close-btn.svg" alt="close" data-close-btn />
       </button>
       <ul class="nav-bar__ul">
-        <li class="nav-bar__item nav-bar__item--home">
-          <a class="nav-bar__anchor" href="../index.html" aria-current="page"
-            >Logo</a
-          >
+        <li class="nav-bar__item">
+          <a href="../index.html" aria-current="page">
+            <img class="logo" src="../images/corazon-ecommerce.png" />
+          </a>
         </li>
         <li class="nav-bar__item">
           <a class="nav-bar__anchor" href="../products/products.html">
             Products</a
           >
-        </li>
-        <li class="nav-bar__item">
-          <input type="text" class="nav-bar__input" placeholder="Mag" />
         </li>
         <li class="nav-bar__item">
           <a class="nav-bar__anchor" href="contact.html"> Contact Us</a>
@@ -49,6 +46,39 @@
   </header>
   <div class="overlay" data-overlay aria-hidden="true"></div>
   <body>
-    Contact us goes here
-  </body>
+    <main class="grid-container">
+
+      <section id="form" class="container__section--form">
+      <h2 class="contact__form">Contact Information:</h2>
+      <form class="volunteer__form" id="volunteer">
+        <label for="name" class="form__label">Name</label>
+        <input type="text" id="name" name="name" placeholder="Full Name:">
+        <p class="error" data-error-msg></p>
+        <label for="email" class="form__label">Email</label>
+        <input type="text" id="email" name="email" placeholder="Email:"  title="needs @ and . com">
+        <p class="error" data-error-msg></p>
+        <label for="phone" class="form__label">Phone Number</label>
+        <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number:">
+        <p class="error" data-error-msg></p>
+        <label for="message" class="form__label">Message</label>
+        <input type="text" id="message" name="message" placeholder="Phone Number:">
+        <p class="error" data-error-msg></p>
+        <button class="submit-btn" data-submit-btn>Submit</button>
+      </form>
+      </section>
+    </section>
+
+
+    </main>
+    <footer class="web-footer">
+      <ul class="footer-container">
+        <li class="footer-item">
+          <a href="contact/contact.html">Contact Us </a>
+        </li>
+        <li class="footer-item"><a href="">Privacy Notice </a></li>
+        <li class="footer-item"><a href="">Instagam</a></li>
+        <li class="footer-item"><a href="">GitHub</a></li>
+      </ul>
+    </footer>
+    </body>
 </html>

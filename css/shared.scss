@@ -1,3 +1,16 @@
+@use "sass:map";
+
+$colors: (
+  "off-white": #f0f0f0,
+  "deep-navy": #0f0f23,
+  "electric-blue": #00bfff,
+  "pop-pink": #ff1493,
+  "gold": #ffd700,
+  "black": #2f2d2d,
+  "overlay": #2b2b2b8b,
+  "nav-hover": #f0f0f069,
+);
+
 * {
   padding: 0;
   margin: 0;
@@ -10,9 +23,7 @@
   position: absolute;
   left: -1.2rem;
   top: -4rem;
-}
-@media (max-width: 850px) {
-  .logo {
+  @media (max-width: 850px) {
     position: relative;
   }
 }
@@ -20,18 +31,16 @@
 body {
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: #f0f0f0;
+  background-color: map.get($colors, off-white);
 }
 
 /* Nest all these elements later */
 .nav-bar {
-  background-color: #0f0f23;
-  color: #f0f0f0;
+  background-color: map.get($colors, deep-navy);
+  color: map.get($colors, off-white);
   width: 100%;
-  border-bottom: 1px solid #f0f0f0;
-}
-@media (max-width: 850px) {
-  .nav-bar {
+  border-bottom: 1px solid map.get($colors, off-white);
+  @media (max-width: 850px) {
     position: fixed;
     top: 0;
     right: -100%;
@@ -39,7 +48,7 @@ body {
     width: min(15em, 100%);
     z-index: 10;
     border: none;
-    border-left: 1px solid #f0f0f0;
+    border-left: 1px solid map.get($colors, off-white);
     transition: right 300ms ease-out;
   }
 }
@@ -50,9 +59,7 @@ body {
   justify-content: space-between;
   list-style: none;
   padding: 1.5rem;
-}
-@media (max-width: 850px) {
-  .nav-bar__ul {
+  @media (max-width: 850px) {
     width: 100%;
     flex-direction: column;
   }
@@ -63,9 +70,9 @@ body {
   color: inherit;
   padding: 1.5rem 2.5rem;
   transition: background-color 150ms ease;
-}
-.nav-bar__anchor:hover {
-  background-color: rgba(240, 240, 240, 0.4117647059);
+  &:hover {
+    background-color: map.get($colors, nav-hover);
+  }
 }
 
 .open-sidebar {
@@ -75,9 +82,7 @@ body {
   padding: 1em;
   margin-left: auto;
   cursor: pointer;
-}
-@media (max-width: 850px) {
-  .open-sidebar {
+  @media (max-width: 850px) {
     display: block;
   }
 }
@@ -89,9 +94,7 @@ body {
   padding: 1em;
   cursor: pointer;
   margin-left: 0.5rem;
-}
-@media (max-width: 850px) {
-  .nav-bar--close {
+  @media (max-width: 850px) {
     display: block;
   }
 }
@@ -103,21 +106,29 @@ body {
   z-index: 2;
   display: none;
 }
-
 .display-overlay {
   display: block;
 }
 
+// <footer class="web-footer">
+//   <ul class="footer-container">
+//     <li class="footer-item">
+//       <a href="contact/contact.html">Contact Us </a>
+//     </li>
+//     <li class="footer-item"><a href="">Privacy Notice </a></li>
+//     <li class="footer-item"><a href="">Instagam</a></li>
+//     <li class="footer-item"><a href="">GitHub</a></li>
+//   </ul>
+// </footer>
+
 .web-footer {
-  background-color: #0f0f23;
+  background-color: map.get($colors, deep-navy);
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 1.5rem;
-}
-@media (max-width: 400px) {
-  .web-footer {
+  @media (max-width: 400px) {
     padding: 1rem;
   }
 }
@@ -127,22 +138,21 @@ body {
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-}
-@media (max-width: 400px) {
-  .footer-container {
+  @media (max-width: 400px) {
     flex-direction: column;
   }
 }
 
 .footer-item {
   cursor: pointer;
-}
-.footer-item a {
-  color: #f0f0f0;
-  text-decoration: none;
+  a {
+    color: map.get($colors, off-white);
+    text-decoration: none;
+  }
 }
 
 /* mobile nav */
+
 @media screen and (max-width: 850px) {
   .show {
     right: 0;
@@ -153,5 +163,3 @@ body {
     font-size: 1.5rem;
   }
 }
-
-/*# sourceMappingURL=shared.css.map */
