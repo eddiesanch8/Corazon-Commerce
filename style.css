@@ -1,24 +1,14 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1.5fr;
-  grid-template-areas:
-    "hero"
-    "gallery";
+  grid-template-areas: "hero" "gallery";
   min-height: 40rem;
-  max-height: auto;
 }
 
 .hero {
   grid-area: hero;
-  background: #fff url("images/human-narrative-_F9sENU1Wtk-unsplash.jpg") center
-    center;
+  background: #f0f0f0 url("images/human-narrative-_F9sENU1Wtk-unsplash.jpg") center center;
   background-attachment: fixed;
   background-size: cover;
   width: 85%;
@@ -30,41 +20,4 @@
   background-color: rgb(14, 14, 107);
 }
 
-/* mobile nav */
-
-@media screen and (max-width: 800px) {
-  .open-sidebar {
-    display: block;
-    z-index: 9;
-  }
-
-  .nav-bar--close {
-    display: block;
-  }
-  .nav-bar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: min(15em, 100%);
-    z-index: 10;
-    border: none;
-    border-left: 1px solid #f0f0f0;
-    transition: right 300ms ease-out;
-  }
-
-  .nav-bar__ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .show {
-    right: 0;
-  }
-
-  .nav-bar__item {
-    width: 100%;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-}
+/*# sourceMappingURL=style.css.map */

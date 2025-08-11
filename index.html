@@ -25,18 +25,15 @@
           <img src="images/close-btn.svg" alt="close" data-close-btn />
         </button>
         <ul class="nav-bar__ul">
-          <li class="nav-bar__item nav-bar__item--home">
-            <a class="nav-bar__anchor" href="index.html" aria-current="page"
-              >Logo</a
-            >
+          <li class="nav-bar__item">
+            <a href="index.html" aria-current="page">
+              <img class="logo" src="images/corazon-ecommerce.png" />
+            </a>
           </li>
           <li class="nav-bar__item">
             <a class="nav-bar__anchor" href="products/products.html">
               Products</a
             >
-          </li>
-          <li class="nav-bar__item">
-            <input type="text" class="nav-bar__input" placeholder="Mag" />
           </li>
           <li class="nav-bar__item">
             <a class="nav-bar__anchor" href="contact/contact.html">
@@ -53,11 +50,16 @@
     <div class="overlay" data-overlay aria-hidden="true"></div>
 
     <main class="grid-container">
-      <section class="hero">Image of Hero Spanning whole page</section>
+      <section class="hero">
+        <h1 class="hero">
+          Start Shopping, <button class="shop">Shop now</button> Contact us
+          <button class="contact">Contact</button>
+        </h1>
+      </section>
       <section class="products">Product Caurosel</section>
     </main>
 
-    <!-- <footer class="web-footer">
+    <footer class="web-footer">
       <ul class="footer-container">
         <li class="footer-item">
           <a href="contact/contact.html">Contact Us </a>
@@ -66,6 +68,6 @@
         <li class="footer-item"><a href="">Instagam</a></li>
         <li class="footer-item"><a href="">GitHub</a></li>
       </ul>
-    </footer> -->
+    </footer>
   </body>
 </html>
