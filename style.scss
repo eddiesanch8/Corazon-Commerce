@@ -75,7 +75,6 @@ body {
   padding: 0 2rem;
   &:hover {
     transform: 10s ease scale(1.1);
-    transform: scale(1.1);
     box-shadow: 0 4px 8px map.get($colors, electric-blue);
   }
 }
@@ -145,6 +144,6 @@ body {
   background-size: cover;
   &:hover {
     box-shadow: map.get($colors, electric-blue) -2px 4px 5px 2px;
-    transform: scale(0.9);
+    transform: 10s ease scale(0.9);
   }
 }
