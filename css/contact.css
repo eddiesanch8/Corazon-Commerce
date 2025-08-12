@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .error {
   color: #000000;
   font-weight: 800;
@@ -12,11 +13,37 @@
 
 .hero {
   grid-area: hero;
-  background: #f0f0f0 url("../images/corazon-2-hero.jpg") center center;
+  color: #f0f0f0;
+  background: #f0f0f0 url("../images/human-narrative-_F9sENU1Wtk-unsplash.jpg") center center;
   background-attachment: fixed;
   background-size: cover;
   width: 85%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  text-shadow: -3px 2px 2px #ff1492;
+}
+
+.hero-header {
+  font-size: 2.5rem;
+  text-align: center;
+  max-width: 80%;
+  background-color: rgba(43, 43, 43, 0.5450980392);
+  border-radius: 10px;
+}
+
+.hero-para {
+  font-size: 1.8rem;
+  text-align: center;
+  max-width: 70%;
+  background-color: rgba(43, 43, 43, 0.5450980392);
+  border-radius: 10px;
 }
 
 .contact {

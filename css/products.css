@@ -22,12 +22,13 @@
 .product-grid {
   display: flex;
   flex-direction: column;
-  background-color: #ff1492;
+  border-radius: 20px;
+  background-color: rgba(255, 20, 145, 0.2901960784);
+  box-shadow: rgba(15, 15, 35, 0.631372549) -5px 4px 6px 0px;
   font-size: 1rem;
   min-width: 100%;
   padding: 1rem;
   margin: 0.5rem;
-  color: #f0f0f0;
 }
 
 .product-name {
@@ -49,7 +50,7 @@
   background-color: #ffffff;
   border-radius: 0.5rem;
   cursor: pointer;
-  border: 1px solid #f0f0f0;
+  border: 2px solid #f0f0f0;
   color: #00bfff;
   font-size: 1rem;
   font-weight: 400;

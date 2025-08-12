@@ -1,5 +1,7 @@
 @use "sass:map";
 
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 $colors: (
   "off-white": #f0f0f0,
   "deep-navy": #0f0f23,
@@ -34,6 +36,9 @@ body {
 }
 
 .hero {
+  font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   text-shadow: -3px 2px 2px map.get($colors, pop-pink);
   flex-direction: column;
@@ -45,6 +50,19 @@ body {
   background-size: cover;
   width: 85%;
   margin: 0 auto;
+}
+
+.hero__header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hero__div {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1rem;
 }
 
 .hero__cta {
@@ -92,6 +110,11 @@ body {
 
 .product__article {
   display: flex;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
   max-width: 80%;
   min-height: 8rem;
   margin: 1rem 1rem;
@@ -144,6 +167,6 @@ body {
   background-size: cover;
   &:hover {
     box-shadow: map.get($colors, electric-blue) -2px 4px 5px 2px;
-    transform: 10s ease scale(0.9);
+    transform: scale(0.9);
   }
 }
