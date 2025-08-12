@@ -32,12 +32,13 @@ $colors: (
 .product-grid {
   display: flex;
   flex-direction: column;
-  background-color: #ff1492;
+  border-radius: 20px;
+  background-color: #ff14914a;
+  box-shadow: #0f0f23a1 -5px 4px 6px 0px;
   font-size: 1rem;
   min-width: 100%;
   padding: 1rem;
   margin: 0.5rem;
-  color: map.get($colors, off-white);
 }
 
 .product-name {
@@ -58,7 +59,7 @@ $colors: (
   background-color: #ffffff;
   border-radius: 0.5rem;
   cursor: pointer;
-  border: 1px solid map.get($colors, off-white);
+  border: 2px solid map.get($colors, off-white);
   color: map.get($colors, electric-blue);
   font-size: 1rem;
   font-weight: 400;

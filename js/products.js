@@ -32,7 +32,7 @@ function createProduct(obj) {
   let productCard = `
         <img class="product-img" src="${obj.image}" alt="${obj.alt}"/>
         <p class="product-name">${obj.name}</p>
-        <p class="product-price">${obj.price}</p>
+        <p class="product-price">$${obj.price}</p>
         <p class="product-desc">
           ${obj.description}
         </p>
