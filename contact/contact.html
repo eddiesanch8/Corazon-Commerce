@@ -22,7 +22,7 @@
     </button>
     <nav class="nav-bar" data-nav-bar>
       <button class="nav-bar--close">
-        <img src="../images/close-btn.svg" alt="close" data-close-btn />
+        <img src="../images/close-nav-btn.svg" alt="close" data-close-btn />
       </button>
       <ul class="nav-bar__ul">
         <li class="nav-bar__item">
@@ -39,10 +39,9 @@
           <a class="nav-bar__anchor" href="contact.html"> Contact Us</a>
         </li>
         <li class="nav-bar__item">
-          <a class="nav-bar__anchor" href=""> Account </a>
-        </li>
-        <li class="nav-bar__item">
-          <a class="nav-bar__anchor" href=""> Cart</a>
+          <a class="nav-bar__anchor" href="">
+            <img src="../images/cart-icon.svg"
+          /></a>
         </li>
       </ul>
     </nav>
@@ -66,7 +65,7 @@
               type="text"
               id="name"
               name="name"
-              placeholder="Full Name:"
+              placeholder="First Name:"
               data-input-name
             />
             <p class="error" data-error-msg></p>
@@ -103,17 +102,20 @@
           </form>
         </div>
       </section>
+      <section data-user-message></section>
 
       <!-- end of main -->
     </main>
     <footer class="web-footer">
       <ul class="footer-container">
         <li class="footer-item">
-          <a href="contact/contact.html">Contact Us </a>
+          <a href="../contact/contact.html">Contact Us </a>
         </li>
         <li class="footer-item"><a href="">Privacy Notice </a></li>
         <li class="footer-item"><a href="">Instagam</a></li>
-        <li class="footer-item"><a href="">GitHub</a></li>
+        <li class="footer-item">
+          <a href="https://github.com/eddiesanch8">GitHub</a>
+        </li>
       </ul>
     </footer>
   </body>
