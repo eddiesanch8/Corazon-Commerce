@@ -11,6 +11,10 @@ $colors: (
   "nav-hover": #f0f0f069,
 );
 
+body {
+  color: map.get($colors, off-white);
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -22,13 +26,51 @@ $colors: (
 }
 
 .hero {
+  display: flex;
+  text-shadow: -3px 2px 2px map.get($colors, pop-pink);
+
+  flex-direction: column;
+  justify-content: space-between;
   grid-area: hero;
-  background: map.get($colors, off-white)
-    url("images/human-narrative-_F9sENU1Wtk-unsplash.jpg") center center;
+  background: map.get($colors, off-white) url("images/corazon-3-hero.jpg")
+    center center;
   background-attachment: fixed;
   background-size: cover;
   width: 85%;
   margin: 0 auto;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  h2 {
+    padding: 0.5rem;
+  }
+
+  @media (min-width: 530px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+.hero__btn {
+  border-style: none;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 1px solid map.get($colors, off-white);
+  color: map.get($colors, electric-blue);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0 2rem;
+  &:hover {
+    transform: 10s ease scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px map.get($colors, electric-blue);
+  }
 }
 
 .products {

@@ -1,0 +1,78 @@
+@use "sass:map";
+
+$colors: (
+  "off-white": #f0f0f0,
+  "deep-navy": #0f0f23,
+  "electric-blue": #00bfff,
+  "pop-pink": #ff1492,
+  "gold": #ffd700,
+  "black": #2f2d2d,
+  "overlay": #2b2b2b8b,
+  "nav-hover": #f0f0f069,
+);
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  gap: 1rem;
+  max-width: 90%;
+  margin: 1rem auto;
+
+  @media (min-width: 650px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff1492;
+  font-size: 1rem;
+  min-width: 100%;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: map.get($colors, off-white);
+}
+
+.product-name {
+  font-weight: 800;
+}
+.product-price {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.product-desc {
+  font-size: 1rem;
+}
+
+.product-btn {
+  border-style: none;
+  margin: 0.5rem auto;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid map.get($colors, off-white);
+  color: map.get($colors, electric-blue);
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 80%;
+  padding: 0 0.5rem;
+  &:hover {
+    transform: 10s ease scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px map.get($colors, electric-blue);
+  }
+  &:focus {
+    transform: 10s ease scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px map.get($colors, electric-blue);
+  }
+
+  @media (min-width: 650px) {
+    padding: 0 2rem;
+  }
+}

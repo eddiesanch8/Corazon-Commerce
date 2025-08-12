@@ -1,3 +1,10 @@
+body {
+  color: #f0f0f0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -7,12 +14,51 @@
 }
 
 .hero {
+  display: flex;
+  text-shadow: -3px 2px 2px #ff1493;
+  flex-direction: column;
+  justify-content: space-between;
   grid-area: hero;
-  background: #f0f0f0 url("images/human-narrative-_F9sENU1Wtk-unsplash.jpg") center center;
+  background: #f0f0f0 url("images/corazon-3-hero.jpg") center center;
   background-attachment: fixed;
   background-size: cover;
   width: 85%;
   margin: 0 auto;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.hero__cta h2 {
+  padding: 0.5rem;
+}
+@media (min-width: 530px) {
+  .hero__cta {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.hero__btn {
+  border-style: none;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  color: #00bfff;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0 2rem;
+}
+.hero__btn:hover {
+  transform: 10s ease scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px #00bfff;
 }
 
 .products {

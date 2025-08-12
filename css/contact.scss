@@ -26,6 +26,16 @@ $colors: (
     "web-bottom";
 }
 
+.hero {
+  grid-area: hero;
+  background: map.get($colors, off-white) url("../images/corazon-2-hero.jpg")
+    center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 85%;
+  margin: 0 auto;
+}
+
 .contact {
   grid-area: contact;
   display: flex;
@@ -33,6 +43,7 @@ $colors: (
   justify-self: center;
   align-items: center;
   border-radius: 20px;
+  margin-top: 1rem;
   padding: 2rem;
   background-color: map.get($colors, deep-navy);
   color: map.get($colors, off-white);

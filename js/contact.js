@@ -30,9 +30,9 @@ const clearErrors = function () {
 const validateName = function () {
   const userName = nameInput.value.trim();
   if (userName === "") {
-    nameError.textContent = "Name is required";
+    nameError.textContent = "**Name is required";
   } else if (!onlyString.test(userName)) {
-    nameError.textContent = "Please don't use numerical values";
+    nameError.textContent = "**Please don't use numerical values";
   }
 };
 
@@ -40,12 +40,12 @@ const validateEmail = function () {
   const email = emailInput.value.trim();
 
   if (email === "") {
-    emailError.textContent = "Email is required";
+    emailError.textContent = "**Email is required";
   }
 
   if (!emailPattern.test(email)) {
     emailError.textContent =
-      "Email must contain @ and end with .com, .org, or .edu";
+      "**Email must contain @ and end with .com, .org, or .edu";
   }
 };
 
@@ -53,18 +53,18 @@ const validatePhone = function () {
   const phone = phoneInput.value.trim();
 
   if (phone === "") {
-    phoneError.textContent = "Phone number is required";
+    phoneError.textContent = "** Phone number is required";
   }
 
   if (!phonePattern.test(phone)) {
     phoneError.textContent =
-      "Please enter a valid phone number (e.g., 123-456-7890)";
+      "**Please enter a valid phone number (e.g., 123-456-7890)";
   }
 };
 
 const validateMessage = function () {
   if (messageInput.value.trim() === "") {
-    messageError.textContent = "Message is required";
+    messageError.textContent = "**Message is required";
   }
 };
 
