@@ -10,6 +10,15 @@
   grid-template-areas: "hero" "contact" "web-bottom";
 }
 
+.hero {
+  grid-area: hero;
+  background: #f0f0f0 url("../images/corazon-2-hero.jpg") center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 85%;
+  margin: 0 auto;
+}
+
 .contact {
   grid-area: contact;
   display: flex;
@@ -17,6 +26,7 @@
   justify-self: center;
   align-items: center;
   border-radius: 20px;
+  margin-top: 1rem;
   padding: 2rem;
   background-color: #0f0f23;
   color: #f0f0f0;

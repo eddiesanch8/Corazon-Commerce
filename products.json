@@ -1,3 +1,99 @@
 {
-  "products": "shoes"
+  "products": [
+    {
+      "name": "The Churse",
+      "price": 49.99,
+      "description": "Famously dubbed 'the churse', this plucky purse will turn heads everywhere you go. You can't go wrong with this statement peice",
+      "image": "../images/churse.webp",
+      "alt": "Purse in the shape of a chicken on a counter with 3 eggs",
+      "category": "accessories"
+    },
+    {
+      "name": "Mini Skirt Purse",
+      "price": 24.99,
+      "description": "A mini-skirt to go, this versatile peice can outdress anyone on anyday. Pair her with your favorite Labubu!",
+      "image": "../images/mini-purse.jpg",
+      "alt": "Purse in the shape of a black miniskirt with a belt buckle",
+      "category": "accessories"
+    },
+    {
+      "name": "Cherri Berri Earings",
+      "price": 10.99,
+      "description": "Sterling Silver cherry earings, they twinkle when you walk and shine when you smile! Perfect with a summer sundress",
+      "image": "../images/cherry-berri.jpg",
+      "alt": "Gold and red earings in the shape of a cherry",
+      "category": "accessories"
+    },
+    {
+      "name": "Sun and Moon Earings",
+      "price": 12.99,
+      "description": "12k gold plated earings, a great statement peice to go with any occassion",
+      "image": "../images/sun-moon-earings.jpg",
+      "alt": "12k Gold Eearings of sun and Moon",
+      "category": "accessories"
+    },
+    {
+      "name": "Black Doc Martens",
+      "price": 59.99,
+      "description": "Grungy, worn, and a staple to any outfit. You can't go wrong with these durable boots",
+      "image": "../images/doc-martens.webp",
+      "alt": "Black boots worn on a model",
+      "category": "shoes"
+    },
+    {
+      "name": "Custom Air Force 1s",
+      "price": 69.99,
+      "description": "Nothing screams Corazon like these electric air force 1s. Make a statement with every step today ",
+      "alt": "Pink and blue custom air force ones",
+      "image": "../images/air-force.webp",
+      "category": "shoes"
+    },
+    {
+      "name": "Rocky Horror Heels",
+      "price": 49.99,
+      "description": "These rosy red heels will catch the eye of everyone at the Pink Pony Club, snatch them up before they're out of stock!",
+      "image": "../images/rocky-heel.webp",
+      "alt": "Knee-length red boots",
+      "category": "shoes"
+    },
+    {
+      "name": "80's Color Block",
+      "price": 22.99,
+      "description": "An 80s-inspired top, this look screams 'I was born in the wrong era'. Limited time only. ",
+      "image": "../images/80s-block.jpg",
+      "alt": "Color-blocked bomber jacket",
+      "category": "tops"
+    },
+    {
+      "name": "Acid Wash Tee",
+      "price": 12.99,
+      "description": "The PH-levels are off the chart with this one! Stop being so basic and get into these cool, barely-used threads",
+      "image": "../images/acid-tee.avif",
+      "alt": "Bleached and gray t-shirt",
+      "category": "tops"
+    },
+    {
+      "name": "Vintage Coca-Cola Sweater",
+      "price": 24.99,
+      "description": "Talk about looking icy, this Coca-Cola look is as refreshing as it is affordable. Limited time only.",
+      "image": "../images/coca-cola-shirt.jpg",
+      "alt": "Vintage Coca-Cola sweater",
+      "category": "tops"
+    },
+    {
+      "name": "UNCC Niners Pink Jersey",
+      "price": 59.99,
+      "description": "Step out onto the playing field with a statement. This Jersey shows your Charlotte pe accentuating all the right places",
+      "image": "../images/pink-jersey.jpeg",
+      "alt": "Pink jersey for UNCC Forty Niners",
+      "category": "tops"
+    },
+    {
+      "name": "Crochet Top",
+      "price": 39.99,
+      "description": "This one of a kind Top is sure to turn heads. Painstakingly corcheted, it breathes well and snatches your waist in all the right places",
+      "image": "../images/crochet-top.jpg",
+      "category": "tops"
+    }
+  ]
 }
