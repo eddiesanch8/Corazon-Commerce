@@ -33,6 +33,8 @@ const validateName = function () {
     nameError.textContent = "**Name is required";
   } else if (!onlyString.test(userName)) {
     nameError.textContent = "**Please don't use numerical values";
+  } else {
+    return true;
   }
 };
 
@@ -41,11 +43,15 @@ const validateEmail = function () {
 
   if (email === "") {
     emailError.textContent = "**Email is required";
+  } else {
+    return true;
   }
 
   if (!emailPattern.test(email)) {
     emailError.textContent =
       "**Email must contain @ and end with .com, .org, or .edu";
+  } else {
+    return true;
   }
 };
 
@@ -54,17 +60,24 @@ const validatePhone = function () {
 
   if (phone === "") {
     phoneError.textContent = "** Phone number is required";
+  } else {
+    return true;
   }
 
   if (!phonePattern.test(phone)) {
     phoneError.textContent =
       "**Please enter a valid phone number (e.g., 123-456-7890)";
+  } else {
+    return true;
   }
 };
 
 const validateMessage = function () {
-  if (messageInput.value.trim() === "") {
+  const userMessage = messageInput.value.trim();
+  if (userMessage === "") {
     messageError.textContent = "**Message is required";
+  } else {
+    return true;
   }
 };
 
@@ -74,13 +87,35 @@ const validateForm = function (event) {
   event.preventDefault();
 
   // Clear previous if they have been fixed
-  clearErrors();
 
+  clearErrors();
   validateName();
   validateEmail();
   validatePhone();
   validateMessage();
+  if (
+    (clearErrors(),
+    validateName(),
+    validateEmail(),
+    validatePhone(),
+    validateMessage())
+  ) {
+    displayMessage();
+  }
 };
 
+function displayMessage() {
+  const validUser = nameInput.value.trim();
+  const validMessage = messageInput.value.trim();
+  const parentSection = document.querySelector("[data-user-message]");
+  parentSection.classList.add("user-message");
+  const newSection = document.createElement("div");
+  newSection.classList.add("user-message__div");
+  let innerPara = `<h2 class="user-para"> ${validUser} said:</h2>
+          <p class="user-para">${validMessage} </p>
+          <p class="user-para">Thanks for the Input ${validUser}!</p>`;
+  newSection.innerHTML = innerPara;
+  parentSection.append(newSection);
+}
 // Add event listener to form submit
 formSection.addEventListener("submit", validateForm);
