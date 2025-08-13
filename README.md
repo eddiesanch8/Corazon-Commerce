@@ -1,4 +1,3 @@
-# Coraz-n-Commerce
 # Corazón - Vintage E-Commerce Website
 
 **"Wear your Corazón on both sleeves"**
