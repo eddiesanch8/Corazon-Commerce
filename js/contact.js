@@ -109,13 +109,17 @@ function displayMessage() {
   const validMessage = messageInput.value.trim();
   const parentSection = document.querySelector("[data-user-message]");
   parentSection.classList.add("user-message");
-  const newSection = document.createElement("div");
-  newSection.classList.add("user-message__div");
-  let innerPara = `<h2 class="user-para"> ${validUser} said:</h2>
+  if (parentSection.children.length >= 1) {
+    return;
+  } else {
+    const newSection = document.createElement("div");
+    newSection.classList.add("user-message__div");
+    let innerPara = `<h2 class="user-para"> ${validUser} said:</h2>
           <p class="user-para">${validMessage} </p>
           <p class="user-para">Thanks for the Input ${validUser}!</p>`;
-  newSection.innerHTML = innerPara;
-  parentSection.append(newSection);
+    newSection.innerHTML = innerPara;
+    parentSection.append(newSection);
+  }
 }
 // Add event listener to form submit
 formSection.addEventListener("submit", validateForm);
