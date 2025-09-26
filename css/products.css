@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Noto+Kufi+Arabic:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap");
 .hero-title {
   text-align: center;
   color: #00bfff;
@@ -29,54 +30,81 @@
 .product-grid {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.5725490196);
+  border-radius: 1rem;
   background-color: rgba(255, 20, 145, 0.2901960784);
-  box-shadow: rgba(15, 15, 35, 0.631372549) -5px 4px 6px 0px;
   font-size: 1rem;
   min-width: 100%;
   padding: 1rem;
   margin: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-grid:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(135, 135, 156, 0.5843137255) -7px 6px 8px 2px;
+}
+
+.product-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .product-name {
   font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #0f0f23;
+  margin: 0.5rem 0;
+  line-height: 1.3;
 }
 
 .product-price {
   font-weight: 400;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .product-desc {
   font-size: 1rem;
+  color: #2f2d2d;
 }
 
 .product-btn {
   border-style: none;
-  margin: 0.5rem auto;
+  margin: 0.5rem auto 0;
   background-color: #ffffff;
   border-radius: 0.5rem;
   cursor: pointer;
-  border: 2px solid #f0f0f0;
+  border: 2px solid #00bfff;
   color: #00bfff;
   font-size: 1rem;
-  font-weight: 400;
-  max-width: 80%;
-  padding: 0 0.5rem;
+  font-weight: 600;
+  width: 90%;
+  padding: 1rem 0.5rem;
+  transition: all 0.2s ease;
+  align-self: center;
 }
 .product-btn:hover {
-  transform: 10s ease scale(1.1);
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px #00bfff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+  background-color: rgba(52, 202, 252, 0.8039215686);
+  color: #ffffff;
 }
 .product-btn:focus {
-  transform: 10s ease scale(1.1);
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px #00bfff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+  background-color: rgba(52, 202, 252, 0.8039215686);
+  color: #ffffff;
+  outline: none;
 }
+
 @media (min-width: 700px) {
   .product-btn {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
 }
 
