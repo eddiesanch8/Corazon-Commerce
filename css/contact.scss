@@ -110,39 +110,64 @@ $colors: (
 }
 
 .submit-btn {
-  border-style: none;
-  margin: 2% 2%;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
+  border: none;
+  margin-top: 1rem;
+  background-color: map.get($colors, off-white);
+  border-radius: 0.8rem;
   cursor: pointer;
-  border: 1px solid map.get($colors, off-white);
   color: map.get($colors, electric-blue);
   font-size: 1.25rem;
-  font-weight: 800;
-  padding: 0 2rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
   &:hover {
+    transform: translateY(-2px) scale(1.02);
+    background-color: map.get($colors, electric-blue);
     transform: 10s ease scale(1.1);
     transform: scale(1.1);
-    box-shadow: 0 4px 8px map.get($colors, electric-blue);
+    box-shadow: 0 2px 8px map.get($colors, electric-blue);
+    color: map.get($colors, off-white);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.4);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
   }
 }
 
 .user-message {
   background-color: map.get($colors, pop-pink);
-  width: 60%;
-  margin: 1rem auto;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
   grid-area: web-bottom;
-  gap: 1rem;
   border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
 }
 
 .user-message__div {
-  background-color: #f0f0f0;
-  width: 50%;
-  margin: 2rem auto;
-  height: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: rgba(240, 240, 240, 0.95);
+  color: map.get($colors, deep-navy);
+  padding: 1.5rem;
+  border-radius: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

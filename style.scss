@@ -91,10 +91,6 @@ body {
   font-size: 1rem;
   font-weight: 800;
   padding: 0 2rem;
-  &:hover {
-    transform: 10s ease scale(1.1);
-    box-shadow: 0 4px 8px map.get($colors, electric-blue);
-  }
 }
 
 .products-grid {
@@ -117,7 +113,7 @@ body {
   font-variation-settings: "wdth" 100;
   max-width: 80%;
   min-height: 8rem;
-  margin: 1rem 1rem;
+  margin: 5% 2%;
   justify-content: center;
   align-items: flex-end;
   @media (max-width: 530px) {
@@ -146,27 +142,15 @@ body {
   border-radius: 2rem;
   background: map.get($colors, pop-pink) url("images/churse.webp");
   background-size: cover;
-  &:hover {
-    box-shadow: map.get($colors, electric-blue) -2px 4px 5px 2px;
-    transform: scale(0.9);
-  }
 }
 
 .product__article--shoes {
   border-radius: 2rem;
   background: map.get($colors, pop-pink) url("images/air-force.webp");
   background-size: cover;
-  &:hover {
-    transform: scale(0.9);
-    box-shadow: map.get($colors, electric-blue) -2px 4px 5px 2px;
-  }
 }
 .product__article--tops {
   border-radius: 2rem;
   background: map.get($colors, pop-pink) url("images/coca-cola-shirt.jpg");
   background-size: cover;
-  &:hover {
-    box-shadow: map.get($colors, electric-blue) -2px 4px 5px 2px;
-    transform: scale(0.9);
-  }
 }
